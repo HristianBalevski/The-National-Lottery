@@ -4,4 +4,4 @@ The National Lottery is easy game. The player has to choose 6 numbers between 0 
 
 PLEASE KEEP IN MIND, THIS IS ONLY A GAME AND THE MONEY ARE NOT REAL!!!
 <br/>
-[Click Here If You Want To Play]()
+[Click Here If You Want To Play](https://replit.com/@HristianBalevsk/The-National-Lottery?v=1)
