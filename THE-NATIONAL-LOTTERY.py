@@ -60,7 +60,7 @@ else:
     print(f'You Guessed {count_equal_numbers} Numbers!')
 
 if count_equal_numbers == 3:
-    print('Not Too bad!')
+    print('Not Too Bad!')
     print('You Won 50 GBP!')
 elif count_equal_numbers == 4:
     print('Good Game!')
