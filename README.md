@@ -6,4 +6,3 @@ PLEASE KEEP IN MIND, THIS IS ONLY A GAME AND THE MONEY ARE NOT REAL!!!
 <br/>
 [Click Here If You Want To Play](https://replit.com/@HristianBalevsk/The-National-Lottery?v=1)
 <br>
-![Lottery Ticket](https://user-images.githubusercontent.com/114162692/204119479-a0fe5faa-5c55-46e1-b3e0-9a0afba92799.png)
