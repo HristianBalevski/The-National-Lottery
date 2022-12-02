@@ -1,36 +1,29 @@
 import random
-print(
-    '''##################################################
-#              THE NATIONAL LOTTERY              #
-#                                                #
-#           SPIN YOUR WAY TO £1 MILLION          #
-#                                                #
-#         All you need is to guess 6 numbers     #
-#                                                #
-#                  GOOD LUCK!                    # 
-#                                                #
-#                                                #
-##################################################
-''')
+print('''               THE NATIONAL LOTTERY                                                 
+          SPIN YOUR WAY TO £1 MILLION                                                          
+                        GOOD LUCK!''')
+valid_symbols = []
+for num in range(1, 51):
+    valid_symbols.append(str(num))
 
-number_one = int(input('Please enter a number between 1 and 50: '))
-if number_one > 50:
-    raise SystemExit('Invalid Input. The number should be between 1 and 50... Try again')
-number_two = int(input('Please enter a number between 1 and 50: '))
-if number_two > 50:
-    raise SystemExit('Invalid Input. The number should be between 1 and 50... Try again')
-number_three = int(input('Please enter a number between 1 and 50: '))
-if number_three > 50:
-    raise SystemExit('Invalid Input. The number should be between 1 and 50... Try again')
-number_four = int(input('Please enter a number between 1 and 50: '))
-if number_four > 50:
-    raise SystemExit('Invalid Input. The number should be between 1 and 50... Try again')
-number_five = int(input('Please enter a number between 1 and 50: '))
-if number_five > 50:
-    raise SystemExit('Invalid Input. The number should be between 1 and 50... Try again')
-number_six = int(input('Please enter a number between 1 and 50: '))
-if number_one > 50:
-    raise SystemExit('Invalid Input. The number should be between 1 and 50... Try again')
+number_one = input('Please enter a number between 1 and 50: ')
+if number_one not in valid_symbols:
+    raise SystemExit('Invalid Input. Please enter a valid number')
+number_two = input('Please enter a number between 1 and 50: ')
+if number_two not in valid_symbols:
+    raise SystemExit('Invalid Input. Please enter a valid number')
+number_three = input('Please enter a number between 1 and 50: ')
+if number_three not in valid_symbols:
+    raise SystemExit('Invalid Input. Please enter a valid number')
+number_four = input('Please enter a number between 1 and 50: ')
+if number_four not in valid_symbols:
+    raise SystemExit('Invalid Input. Please enter a valid number')
+number_five = input('Please enter a number between 1 and 50: ')
+if number_five not in valid_symbols:
+    raise SystemExit('Invalid Input. Please enter a valid number')
+number_six = input('Please enter a number between 1 and 50: ')
+if number_six not in valid_symbols:
+    raise SystemExit('Invalid Input. Please enter a valid number')
 
 list_of_numbers = [number_one, number_two, number_three, number_four, number_five, number_six]
 
