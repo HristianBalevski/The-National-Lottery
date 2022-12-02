@@ -11,7 +11,7 @@ def repeated_number():
 
 print('''               
                 THE NATIONAL LOTTERY                                                 
-            SPIN YOUR WAY TO £1 MILLION                                                          
+            SPIN YOUR WAY TO $1 MILLION                                                          
 ''')
 
 valid_symbols = []
@@ -97,15 +97,15 @@ else:
 
 if count_equal_numbers == 3:
     print('Not Too Bad!')
-    print('You Won 50 GBP!')
+    print('You Won 50 USD!')
 elif count_equal_numbers == 4:
     print('Good Game!')
-    print('You Won 150 GBP!')
+    print('You Won 150 USD!')
 elif count_equal_numbers == 5:
     print('Very Good!')
-    print('You Won 5000 GBP!')
+    print('You Won 5000 USD!')
 elif count_equal_numbers == 6:
     print('Congratulations!')
-    print('You Won 1 000 000 GBP!')
+    print('You Won 1 000 000 USD!')
 else:
     print('Better Luck Next Time!')
