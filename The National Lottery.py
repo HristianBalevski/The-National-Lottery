@@ -13,24 +13,24 @@ print(
 ##################################################
 ''')
 
-number_one = int(input('Please enter a number between 0 and 49: '))
-if number_one > 49:
-    raise SystemExit('Invalid Input. The number should be between 0 and 49... Try again')
-number_two = int(input('Please enter a number between 0 and 49: '))
-if number_two > 49:
-    raise SystemExit('Invalid Input. The number should be between 0 and 49... Try again')
-number_three = int(input('Please enter a number between 0 and 49: '))
-if number_three > 49:
-    raise SystemExit('Invalid Input. The number should be between 0 and 49... Try again')
-number_four = int(input('Please enter a number between 0 and 49: '))
-if number_four > 49:
-    raise SystemExit('Invalid Input. The number should be between 0 and 49... Try again')
-number_five = int(input('Please enter a number between 0 and 49: '))
-if number_five > 49:
-    raise SystemExit('Invalid Input. The number should be between 0 and 49... Try again')
-number_six = int(input('Please enter a number between 0 and 49: '))
-if number_one > 49:
-    raise SystemExit('Invalid Input. The number should be between 0 and 49... Try again')
+number_one = int(input('Please enter a number between 1 and 50: '))
+if number_one > 50:
+    raise SystemExit('Invalid Input. The number should be between 1 and 50... Try again')
+number_two = int(input('Please enter a number between 1 and 50: '))
+if number_two > 50:
+    raise SystemExit('Invalid Input. The number should be between 1 and 50... Try again')
+number_three = int(input('Please enter a number between 1 and 50: '))
+if number_three > 50:
+    raise SystemExit('Invalid Input. The number should be between 1 and 50... Try again')
+number_four = int(input('Please enter a number between 1 and 50: '))
+if number_four > 50:
+    raise SystemExit('Invalid Input. The number should be between 1 and 50... Try again')
+number_five = int(input('Please enter a number between 1 and 50: '))
+if number_five > 50:
+    raise SystemExit('Invalid Input. The number should be between 1 and 50... Try again')
+number_six = int(input('Please enter a number between 1 and 50: '))
+if number_one > 50:
+    raise SystemExit('Invalid Input. The number should be between 1 and 50... Try again')
 
 list_of_numbers = [number_one, number_two, number_three, number_four, number_five, number_six]
 
@@ -39,7 +39,7 @@ string_list_of_numbers = [str(int) for int in list_of_numbers]
 count_equal_numbers = 0
 
 # Every time here I generate random numbers
-national_lottery = range(0, 49)
+national_lottery = range(1, 50)
 copy_list = (random.choices(national_lottery, k=6))
 
 # Here I convert int to str
