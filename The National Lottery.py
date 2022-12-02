@@ -88,22 +88,28 @@ print()
 for num in list_of_numbers:
     if num in copy_list:
         count_equal_numbers += 1
+        
 if count_equal_numbers == 1:
     print(f'You Guessed only {count_equal_numbers} Number!')
+    
 elif count_equal_numbers == 2:
     print(print(f'You Guessed only {count_equal_numbers} Numbers!'))
+    
 else:
     print(f'You Guessed {count_equal_numbers} Numbers!')
 
 if count_equal_numbers == 3:
     print('Not Too Bad!')
     print('You Won 50 USD!')
+    
 elif count_equal_numbers == 4:
     print('Good Game!')
     print('You Won 150 USD!')
+    
 elif count_equal_numbers == 5:
     print('Very Good!')
     print('You Won 5000 USD!')
+    
 elif count_equal_numbers == 6:
     print('Congratulations!')
     print('You Won 1 000 000 USD!')
