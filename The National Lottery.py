@@ -34,7 +34,7 @@ while True:
 
 winning_numbers = set()
 
-# Every time here I generate random numbers
+# Every time here I generate random number
 while len(winning_numbers) != 6:
     random_number = random.randint(1, 50)
     winning_numbers.add(random_number)
