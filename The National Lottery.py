@@ -7,18 +7,12 @@ THE NATIONAL LOTTERY SPIN YOUR WAY TO $1 MILLION
 print('You have to choose 6 numbers!')
 print()
 
-valid_numbers = []
 chosen_numbers = []
-
-for num in range(1, 51):
-    valid_numbers.append(num)
-
-rotation = 0
 
 while True:
     try:
-        player_number = int(input('Please choose a number between 1 and 50: '))
-        if player_number < 1 or player_number > 50:
+        player_number = int(input('Please choose a number between 1 and 49: '))
+        if player_number < 1 or player_number > 49:
             print('Please enter a valid number!')
             continue
         elif player_number in chosen_numbers:
@@ -28,15 +22,15 @@ while True:
     except ValueError:
         print('Invalid values, try again!')
         continue
-    rotation += 1
-    if rotation == 6:
+
+    if len(chosen_numbers) == 6:
         break
 
 winning_numbers = set()
 
 # Every time here I generate random number
-while len(winning_numbers) != 6:
-    random_number = random.randint(1, 50)
+while len(winning_numbers) < 6:
+    random_number = random.randint(1, 49)
     winning_numbers.add(random_number)
 
 print()
