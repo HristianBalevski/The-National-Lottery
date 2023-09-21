@@ -18,7 +18,7 @@ rotation = 0
 while True:
     try:
         player_number = int(input('Please choose a number between 1 and 50: '))
-        if player_number <= 0 or player_number > 50:
+        if player_number < 1 or player_number > 50:
             print('Please enter a valid number!')
             continue
         elif player_number in chosen_numbers:
