@@ -1,87 +1,83 @@
 import random
 
 
+def get_valid_number(chosen_numbers):
+    while True:
+        try:
+            player_number = int(input('Please choose a number between 1 and 49: '))
+            validate_number(player_number, chosen_numbers)
+            return player_number
+        except ValueError:
+            print('Invalid values, try again!')
+
+
+def validate_number(player_number, chosen_numbers):
+    if player_number < 1 or player_number > 49:
+        print('Please enter a valid number.')
+
+    if player_number in chosen_numbers:
+        print('This number is already chosen')
+
+
 def get_numbers():
     chosen_numbers = []
 
     while len(chosen_numbers) < 6:
-        try:
-            player_number = int(input('Please choose a number between 1 and 49: '))
-            if player_number < 1 or player_number > 49:
-                print('Please enter a valid number!')
-                continue
-            elif player_number in chosen_numbers:
-                print('This number is already chosen')
-                continue
-            chosen_numbers.append(player_number)
-        except ValueError:
-            print('Invalid values, try again!')
-            continue
+        player_number = get_valid_number(chosen_numbers)
+        chosen_numbers.append(player_number)
+
     return chosen_numbers
 
 
 def generate_winning_numbers():
-    win_numbers = set()
-
-    # Every time here I generate random number
-    while len(win_numbers) < 6:
-        random_number = random.randint(1, 49)
-        win_numbers.add(random_number)
-
-    return win_numbers
+    # Generate 6 unique random numbers in the range [1, 49]
+    return random.sample(range(1, 50), 6)
 
 
-def count_win_numbers():
-    count_equal_numbers = 0
-    # Here I check how many equal numbers we have
-    for num in player_numbers:
-        if num in winning_numbers:
-            count_equal_numbers += 1
-
-    return count_equal_numbers
+def count_win_numbers(player_numbers, winning_numbers):
+    # Count the number of equal numbers between player's and winning numbers
+    return len(set(player_numbers) & set(winning_numbers))
 
 
 def check_for_reward(numbers):
+    # Check the number of matches and return the corresponding message
     if numbers == 3:
-        return 'Not Too Bad!\nYou Won 50 USD!'
-
+        return 'Not Too Bad!\nYou Won $50!'
     elif numbers == 4:
-        return 'Good Game!\nYou Won 150 USD!'
-
+        return 'Good Game!\nYou Won $150!'
     elif numbers == 5:
-        return 'Very Good!\nYou Won 5000 USD!'
-
+        return 'Very Good!\nYou Won $5000!'
     elif numbers == 6:
-        return 'Congratulations!\nYou Won 1 000 000 USD!'
+        return 'Congratulations!\nYou Won $1,000,000!'
     else:
         return 'Better Luck Next Time!'
 
 
-print('''               
-THE NATIONAL LOTTERY SPIN YOUR WAY TO $1 MILLION                                                          
-''')
+if __name__ == "__main__":
+    print('''
+    THE NATIONAL LOTTERY SPIN YOUR WAY TO $1 MILLION                                                          
+    ''')
 
-print('You have to choose 6 numbers!')
-print()
+    print('You have to choose 6 numbers!\n')
 
-player_numbers = get_numbers()
-winning_numbers = generate_winning_numbers()
+    # Getting the user's numbers
+    player_numbers = get_numbers()
 
-print()
-print(f'These are your numbers: {", ".join([str(num) for num in player_numbers])}')
+    # Generating winning numbers
+    winning_numbers = generate_winning_numbers()
 
-print(f'These are the winning numbers: {", ".join([str(num) for num in winning_numbers])}')
-print()
+    # Display the user's numbers and winning numbers
+    print(f'\nThese are your numbers: {", ".join(map(str, player_numbers))}')
+    print(f'These are the winning numbers: {", ".join(map(str, winning_numbers))}\n')
 
-equal_numbers = count_win_numbers()
+    # Number of matching numbers
+    equal_numbers = count_win_numbers(player_numbers, winning_numbers)
 
-if equal_numbers == 1:
-    print(f'You Guessed only {equal_numbers} Number!')
+    # Display a message about the matches
+    if equal_numbers in (1, 2):
+        print(f'You Guessed only {equal_numbers} Number!')
+    else:
+        print(f'You Guessed {equal_numbers} Numbers!')
 
-elif equal_numbers == 2:
-    print(f'You Guessed only {equal_numbers} Numbers!')
-
-else:
-    print(f'You Guessed {equal_numbers} Numbers!')
-
-print(check_for_reward(equal_numbers))
+    # Reward check and message output
+    print(check_for_reward(equal_numbers))
