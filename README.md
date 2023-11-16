@@ -1,6 +1,6 @@
 # The-National-Lottery
 
-The National Lottery is easy game. The player has to choose 6 numbers between 1 and 49. Then the computer will generate 6 random numbers. If all player's numbers match with the computer's numbers the player will win 1 Million Dollars. If the matched numbers are between 3 and 5 the player will wins different amount of money and if the matched numbers are less than 3 the player wins nothing.
+The National Lottery is a simple game. To play, the participant must select 6 numbers from a range of 1 to 49. Subsequently, the computer will generate 6 random numbers. If all of the player's chosen numbers match the computer-generated ones, the player wins 1 million dollars. If the matched numbers fall between 3 and 5, the player will win a varying amount of money. If the matched numbers are fewer than 3, the player wins nothing.
 
 [Click Here If You Want To Play](https://replit.com/@HristianBalevsk/The-National-Lottery?v=1)
 <br>
