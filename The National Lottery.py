@@ -5,18 +5,17 @@ def get_valid_number(chosen_numbers):
     while True:
         try:
             player_number = int(input('Please choose a number between 1 and 49: '))
-            validate_number(player_number, chosen_numbers)
+            if player_number < 1 or player_number > 49:
+                print('Please enter a valid number!')
+                continue
+
+            if player_number in chosen_numbers:
+                print('This number is already chosen.')
+                continue
+
             return player_number
         except ValueError:
-            print('Invalid values, try again!')
-
-
-def validate_number(player_number, chosen_numbers):
-    if player_number < 1 or player_number > 49:
-        print('Please enter a valid number.')
-
-    if player_number in chosen_numbers:
-        print('This number is already chosen')
+            print('Invalid input. Please try again...')
 
 
 def get_numbers():
